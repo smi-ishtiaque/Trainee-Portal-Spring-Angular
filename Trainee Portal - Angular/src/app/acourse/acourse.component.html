@@ -1,0 +1,119 @@
+<app-adminpanel></app-adminpanel>
+
+<div class="main">
+    <h1 style="text-align:center;"><span>TSP</span></h1><br><br>
+
+<div  style="margin: 30px;margin-left: 80px; float: left; width: 180px;">
+<button  class="button btn btn-primary" (click)="div1Function()">Total TSP</button>
+</div>
+
+<div  style="margin: 30px; float: left; width: 75px;">
+<button  class="button btn btn-primary" (click)="div2Function()">Add TSP</button>
+</div>
+
+<!-- <div style="margin: 30px; float: left; width: 110px;">
+<button  class="button" (click)="div3Function()">Update</button>
+</div> -->
+
+<div style="margin: 30px; float: left; width: 100px;">
+<button  class="button btn btn-primary" (click)="div3Function()">Delete TSP</button>
+</div>
+
+<div style="margin: 30px; float: left; width: 80px;">
+<button  class="button btn btn-primary" (click)="div4Function()">Hide TSP</button>
+</div><br><br><br><br>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<div *ngIf="div1" class="table-responsive datatable-custom position-relative">
+  <table id="datatable" class="table table-lg table-borderless table-thead-bordered table-nowrap table-align-middle card-table" data-hs-datatables-options='{
+           "columnDefs": [{
+              "targets": [0, 7],
+              "orderable": false
+            }],
+           "order": [],
+           "info": {
+             "totalQty": "#datatableWithPaginationInfoTotalQty"
+           },
+           "search": "#datatableSearch",
+           "entries": "#datatableEntries",
+           "pageLength": 15,
+           "isResponsive": false,
+           "isShowPaging": false,
+           "pagination": "datatablePagination"
+         }'>
+    <thead class="thead-light">
+      <tr>
+        <th style="width: 10px;">SL No</th>
+        <th>TSP</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let l of loginpages">
+        
+      <td>{{l.id}}</td>
+      <td>{{l.tsp}}</td>
+      <td>{{l.location}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+<div *ngIf="div2">
+  <div class="container" style="background-color:white; padding: 15px 150px 60px 15px; border-radius: 15px;width: 400px;">
+  <h2 style="text-align:center;color: rgb(62, 140, 212);">Add TSP</h2><br>
+<form #insertdata="ngForm" (ngSubmit)="insertdetails(insertdata)">
+
+  <div class="form-outline" style="width: 350px;"> 
+  <label class="form-label" for="form2Example1">SL.No.</label>
+  <input type="text" id="form2Example1" placeholder="SL No." class="form-control" name="id" ngModel>
+</div><br><br>
+
+<div class="form-outline" style="width: 350px;"> 
+<label class="form-label" for="form2Example2" >TSP</label>
+<input type="text" id="form2Example2" placeholder="TSP Name" class="form-control" name="tsp" ngModel>
+</div><br><br>
+
+<div class="form-outline" style="width: 350px;"> 
+<label class="form-label" for="form2Example2" >Location</label>
+<input type="text" id="form2Example2" placeholder="Location" class="form-control" name="location" ngModel>
+</div><br><br>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+
+  <button  class="button btn btn-primary" type="submit" value="Insert" (click)="insertdetails(insertdata)" >Add </button><br>
+</form>
+  </div>
+</div>
+
+<div *ngIf="div3">
+    <div class="container" style="background-color:white; padding: 5px 5px 45px 5px; border-radius: 15px; width: 400px;">
+      <h2 style="text-align:center;color: rgb(70, 84, 214);">Delete TSP</h2>
+      <form #data="ngForm" (ngSubmit)="deleteLoginpage(data)">
+      <div class="form-outline" style="width: 350px;"> 
+      <label class="form-label" >SL.No.</label>
+      <input type="text"  placeholder="SL No." class="form-control" name="id" ngModel>
+      </div><br>
+
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+      <button  class="button btn btn-primary" type="submit" value="Delete" (click)="deleteLoginpage(data)" >Delete </button><br>
+      </form>
+    </div>
+</div>
+
+</div>
+
+
+
+

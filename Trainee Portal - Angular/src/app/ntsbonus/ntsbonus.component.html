@@ -1,0 +1,93 @@
+<app-nttraineepanel></app-nttraineepanel>
+
+<div class="main">
+    <h1 style="text-align:center;"><span>Bonus Panel</span></h1><br>
+<div class="container" style="background-color:white; padding: 15px 15px 60px 15px; border-radius: 15px;width: 800px;">
+    <!-- <h2 style="text-align:center;color: red;"></h2><br> -->
+  <form #insertdata="ngForm" (ngSubmit)="insertdetails(insertdata)">
+  
+    <div class="form-outline" style="width: 400px;"> 
+        <h5 style="text-align:center;color: rgb(99, 86, 219);"> *Trainee Bonus Panel-</h5>
+    </div>
+
+    <div class="form-outline" > 
+        <h5 style="text-align:center;color: rgb(61, 84, 218);"> *Trainee Account No.-001122</h5>
+    </div><br><br>
+
+    <div class="form-outline" style="width: 100px;"> 
+    <label class="form-label" for="form2Example1">Trainee ID.</label>
+    <input type="text" id="form2Example1" placeholder="Trainee ID." class="form-control" name="id" ngModel>
+  </div>
+  
+  <div class="form-outline" style="width: 200px;"> 
+  <label class="form-label" for="form2Example2" >First Name</label>
+  <input type="text" id="form2Example2" placeholder="First Name" class="form-control" name="firstname" ngModel>
+  </div>
+  
+  <div class="form-outline" > 
+  <label class="form-label" for="form2Example3">Last Name</label>
+  <input type="text" id="form2Example3" placeholder="Last Name"Last Name class="form-control" name="lastname" ngModel>
+  </div><br><br><br><br>
+  
+  <!-- <div class="form-outline" style="width: 170px;"> 
+    <label class="form-label" for="form2Example4">Gender</label>
+    <input type="text" id="form2Example4" placeholder="gender" class="form-control" name="gender" ngModel>
+  </div> -->
+  
+  <div class="form-outline" style="width: 130px;"> 
+  <label class="form-label" for="form2Example4">TSP</label>
+  <input type="text" id="form2Example4" placeholder="TSP" class="form-control" name="tsp" ngModel>
+  </div>
+  
+  <div class="form-outline" style="width: 170px;"> 
+  <label class="form-label" for="form2Example5">Year</label>
+  <input type="text" id="form2Example5" placeholder="year" class="form-control" name="year" ngModel>
+  </div>
+  
+  <div class="form-outline" style="width: 170px;"> 
+    <label class="form-label" for="form2Example6">Round</label>
+    <input type="text" id="form2Example6" placeholder="Round" class="form-control" name="round" ngModel>
+    </div>
+  
+  <div class="form-outline" style="width: 220px;"> 
+  <label class="form-label" for="form2Example7">Mobile No.</label>
+  <input type="text" id="form2Example7" placeholder="mobileno" class="form-control" name="mobileno" ngModel>
+  </div><br>
+  
+    <!-- <div class="form-outline" style="width: 250px;"> 
+      <label class="form-label" for="form2Example8">Email address</label>
+      <input type="email" id="form2Example8" placeholder="abc@xyz.com" class="form-control" name="email" ngModel>
+     
+    </div><br><br><br><br><br> -->
+  
+    <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example8">Bonus Received Date</label>
+        <input type="date" id="form2Example8" placeholder="dd-mm-yyyy" class="form-control" name="date" ngModel>
+        <!-- <div *ngIf="password.invalid && password.touched"><small class="text-danger">Password should not be blank</small></div>    -->
+      </div><br>
+
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form2Example9">Gateway Method</label>
+      <input type="text" id="form2Example9" placeholder="Gateway Method" class="form-control" name="pmode" ngModel>
+      <!-- <div *ngIf="password.invalid && password.touched"><small class="text-danger">Password should not be blank</small></div>    -->
+    </div><br>
+
+    <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example10">Account No.</label>
+        <input type="text" id="form2Example10" placeholder="Account No." class="form-control" name="accno" ngModel>
+        <!-- <div *ngIf="password.invalid && password.touched"><small class="text-danger">Password should not be blank</small></div>    -->
+    </div><br>
+
+    <div class="form-outline mb-4">
+        <label class="form-label" for="form2Example11">Deposit Amount</label>
+        <input type="text" id="form2Example11" placeholder="Bonus Deposit Amount" class="form-control" name="bonus" ngModel>
+        <!-- <div *ngIf="password.invalid && password.touched"><small class="text-danger">Password should not be blank</small></div>    -->
+    </div><br><br>
+
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+    <button  class="button btn btn-primary" type="submit" value="Insert" (click)="insertdetails(insertdata)" >Deposit</button><br>
+  </form>
+    </div><br><br>
+</div>

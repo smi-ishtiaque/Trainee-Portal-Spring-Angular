@@ -1,0 +1,175 @@
+<div class="container-xxl py-5">
+  <!-- <div class="main"> -->
+     <h1 style="text-align:center;"><span class="badge bg-primary">Instructor Login</span></h1><br><br><br>
+
+<div  style="margin-right: 0px;">
+<button  class="button btn btn-info" (click)="div1Function()">Database</button>
+</div>
+
+<div  style=" float: left; width: 50px; margin-left:300px;">
+<button  class="button btn btn-primary" (click)="div2Function()">Networking</button>
+</div>
+
+<div style=" float: left; width: 50px; margin-left:600px;">
+<button  class="button btn btn-secondary" (click)="div3Function()">JAVA-(JEE-ESAD)</button>
+</div><br><br><br><br>
+
+<!-- <div style=" float: left; width: 50px;margin-left:785px;">
+<button  class="button" (click)="div4Function()">Hide</button>
+</div><br><br><br><br> -->
+
+<div *ngIf="div1">
+  <h2 class="alert alert-primary" style="text-align:center;">Database Login</h2>
+  
+  <body style="padding-top: 0px;
+      padding-right: 500px;
+      padding-bottom: 50px;
+      padding-left: 500px;" >
+  <div class="container" style="background-color:white; padding: 25px; border-radius: 15px;">
+
+    <!-- Form -->
+    <form class="js-validate" #loginform="ngForm" (ngSubmit)="loginFaculty1()">
+      <!-- Title -->
+      <div class="mb-6 mb-md-7">
+        <h1 class="h2">Welcome Back</h1>
+        <p>Login to Manage Your Account.</p>
+      </div>
+      <!-- End Title -->
+
+      <!-- Form Group -->
+      <div class="js-form-message form-group">
+        <small class="text-danger">{{msg}}</small><br>
+        <label class="form-label" for="form2Example1">Email Address</label>
+        <input type="email" id="form2Example1" placeholder="Type Email Address" class="form-control" name="email" [(ngModel)]="faculty.email" #email="ngModel" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+        <div *ngIf="email.invalid && email.touched"><small class="text-danger">Enter Correct Email</small></div> 
+      </div>
+      <!-- End Form Group -->
+
+      <!-- Form Group -->
+      <div class="js-form-message form-group">
+        <label class="form-label" for="form2Example2">Password</label>
+    <input type="password" required minlength="5" maxlength="16" id="form2Example2" placeholder="Enter Your Password" class="form-control" name="password" #password="ngModel" [(ngModel)]="faculty.password">
+    <div *ngIf="password.invalid && password.touched"><small class="text-danger">Password should not be blank</small></div> 
+      </div>
+      <!-- End Form Group -->
+
+      <!-- Button -->
+      <div class="row align-items-center mb-5">
+        <div class="col-xl-6 mb-3 mb-sm-0">
+          <a class="font-size-1 font-weight-bold" href="signup.html">Signup</a>
+        </div>
+
+        <div class="col-sm-6 text-sm-right">
+         
+          <button [disabled]="loginform.form.invalid" class="btn btn-primary transition-3d-hover" type="submit">Login</button>
+        </div>
+      </div>
+      <!-- End Button -->
+    </form>
+    <!-- End Form -->
+  </div>
+  </body>
+</div>
+
+
+
+<div *ngIf="div2">
+  <h2 class="alert alert-primary" style="text-align:center;">Networking Login</h2>
+  <body style="padding-top: 0px;
+      padding-right: 500px;
+      padding-bottom: 50px;
+      padding-left: 500px;" >
+  <div class="container" style="background-color:white; padding: 25px; border-radius: 15px;">
+    <form class="js-validate" #loginform="ngForm" (ngSubmit)="loginFaculty2()">
+      <!-- Title -->
+      <div class="mb-6 mb-md-7">
+        <h1 class="h2">Welcome Back</h1>
+        <p>Login to manage your account.</p>
+      </div>
+      <!-- End Title -->
+
+      <!-- Form Group -->
+      <div class="js-form-message form-group">
+        <small class="text-danger">{{msg}}</small><br>
+        <label class="form-label" for="form2Example1">Email Address</label>
+        <input type="email" id="form2Example1" placeholder="Type Email Address" class="form-control" name="email" [(ngModel)]="faculty.email" #email="ngModel" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+        <div *ngIf="email.invalid && email.touched"><small class="text-danger">Enter Correct Email</small></div> 
+      </div>
+      <!-- End Form Group -->
+
+      <!-- Form Group -->
+      <div class="js-form-message form-group">
+        <label class="form-label" for="form2Example2">Password</label>
+    <input type="password" required minlength="5" maxlength="16" id="form2Example2" placeholder="Enter Your Password" class="form-control" name="password" #password="ngModel" [(ngModel)]="faculty.password">
+    <div *ngIf="password.invalid && password.touched"><small class="text-danger">Password should not be blank</small></div> 
+      </div>
+      <!-- End Form Group -->
+
+      <!-- Button -->
+      <div class="row align-items-center mb-5">
+        <div class="col-xl-6 mb-3 mb-sm-0">
+          <a class="font-size-1 font-weight-bold" href="signup.html">Signup</a>
+        </div>
+
+        <div class="col-sm-6 text-sm-right">
+         
+          <button [disabled]="loginform.form.invalid" class="btn btn-primary transition-3d-hover" type="submit">Login</button>
+        </div>
+      </div>
+      <!-- End Button -->
+    </form>
+  </div>
+  </body>
+</div>
+
+<div *ngIf="div3">
+  <h2 class="alert alert-primary" style="text-align:center;">JAVA(JEE-ESAD) Login</h2>
+  <body style="padding-top: 0px;
+      padding-right: 500px;
+      padding-bottom: 50px;
+      padding-left: 500px;" >
+  <div class="container" style="background-color:white; padding: 25px; border-radius: 15px;">
+    <form class="js-validate" #loginform="ngForm" (ngSubmit)="loginFaculty3()">
+      <!-- Title -->
+      <div class="mb-6 mb-md-7">
+        <h1 class="h2">Welcome Back</h1>
+        <p>Login to manage your account.</p>
+      </div>
+      <!-- End Title -->
+
+      <!-- Form Group -->
+      <div class="js-form-message form-group">
+        <small class="text-danger">{{msg}}</small><br>
+        <label class="form-label" for="form2Example1">Email Address</label>
+        <input type="email" id="form2Example1" placeholder="Type Email Address" class="form-control" name="email" [(ngModel)]="faculty.email" #email="ngModel" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+        <div *ngIf="email.invalid && email.touched"><small class="text-danger">Enter Correct Email</small></div> 
+      </div>
+      <!-- End Form Group -->
+
+      <!-- Form Group -->
+      <div class="js-form-message form-group">
+        <label class="form-label" for="form2Example2">Password</label>
+    <input type="password" required minlength="5" maxlength="16" id="form2Example2" placeholder="Enter Your Password" class="form-control" name="password" #password="ngModel" [(ngModel)]="faculty.password">
+    <div *ngIf="password.invalid && password.touched"><small class="text-danger">Password should not be blank</small></div> 
+      </div>
+      <!-- End Form Group -->
+
+      <!-- Button -->
+      <div class="row align-items-center mb-5">
+        <div class="col-xl-6 mb-3 mb-sm-0">
+          <a class="font-size-1 font-weight-bold" href="signup.html">Signup!</a>
+        </div>
+
+        <div class="col-sm-6 text-sm-right">
+         
+          <button [disabled]="loginform.form.invalid" class="btn btn-primary transition-3d-hover" type="submit">Login</button>
+        </div>
+      </div>
+      <!-- End Button -->
+    </form>
+  </div>
+  </body>
+</div>
+
+<!-- </div> -->
+</div><br>
